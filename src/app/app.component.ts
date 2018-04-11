@@ -11,28 +11,14 @@ import { HomePage } from '../pages/home/home';
 export class MyApp {
   rootPage: any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public oneSignal: OneSignal) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private oneSignal: OneSignal) {
     platform.ready().then(() => {
-
-     this.oneSignal.startInit("AppId (OneSignal)", "Google project number (Firebase)")
-                   .sendTag('email', 'marcelo@gmail.com')
-    
-     this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
-
-     this.oneSignal.getIds()
-       .then((ids) => {
-              console.log('getIds: ' + JSON.stringify(ids));
-     });
-
-     this.oneSignal.handleNotificationOpened().subscribe(() => {
-      console.log('ok');
-      
-    });
-  
-    this.oneSignal.endInit();
-
     statusBar.styleDefault();
     splashScreen.hide();
+
+    this.oneSignal.startInit("XXXXXXXXXXX", "XXXXXXXXXXX")
+                  .sendTag('email', 'XXXXXXXXXXX')
+                  .endInit();
     });
   }
 }
