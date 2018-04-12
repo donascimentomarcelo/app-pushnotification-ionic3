@@ -16,8 +16,8 @@ export class MyApp {
     statusBar.styleDefault();
     splashScreen.hide();
 
-    this.oneSignal.startInit("XXXXXXXXXXX", "XXXXXXXXXXX")
-                  .sendTag('email', 'XXXXXXXXXXX')
+    this.oneSignal.startInit("XXXXXXXXXX", "XXXXXXXXXX")
+                  .sendTag('email', 'XXXXXXXXXX')
                   .endInit();
     });
   }
