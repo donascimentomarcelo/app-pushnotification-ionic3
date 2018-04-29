@@ -16,9 +16,10 @@ export class MyApp {
     statusBar.styleDefault();
     splashScreen.hide();
 
-    this.oneSignal.startInit("XXXXXXXXXX", "XXXXXXXXXX")
-                  .sendTag('email', 'XXXXXXXXXX')
-                  .endInit();
+    this.oneSignal.startInit("APP_ID", "ID_FIRE_BASE")
+    this.oneSignal.sendTag('email', 'EMAIL')
+    this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+    this.oneSignal.endInit();
     });
   }
 }
